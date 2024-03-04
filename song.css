@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-vector/pink-flower-frame-background-with-watercolor_65186-2566.jpg?size=626&ext=jpg&ga=GA1.1.824795046.1709525194&semt=ais');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #4a86e8;
+    font-size: 2em;
+}
+
+.verse {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-align: center;
+    color: #999;
+}
+
+.chorus {
+    font-family: 'Georgia', serif;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+}
+@keyframes slideShow {
+    0% {opacity: 0; transform: translateY(100%);}
+    10% {opacity: 1; transform: translateY(0);}
+    30% {opacity: 1; transform: translateY(0);}
+    40% {opacity: 0; transform: translateY(-100%);}
+    100% {opacity: 0; transform: translateY(-100%);}
+}
+
+.verse, .chorus {
+    animation: slideShow 12s linear infinite;
+}
+
+.verse:nth-child(2), .chorus:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.verse:nth-child(3), .chorus:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* Add more delays as needed, each one should be 4s more than the previous */
+
